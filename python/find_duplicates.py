@@ -1,4 +1,17 @@
 def find_duplicates_nested_loop(l: list) -> list:
+    results = list()
+    for i in range(len(l)):
+        num = l[i]
+        duplicate = False
+        for j in range(i + 1, len(l)):
+            if num == l[j]:
+                duplicate = True
+                break
+        if duplicate and num not in results:
+            results.append(num)
+    return results
+
+def find_duplicates(l: list) -> list:
     unique = set()
     results = set()
 
@@ -16,7 +29,7 @@ if __name__ == "__main__":
     sample3 = [3, 0, 5, 1, 0]
     sample4 = [3]
     
-    print("Sample 1:", find_duplicates_nested_loop(sample1))
-    print("Sample 2:", find_duplicates_nested_loop(sample2))
-    print("Sample 3:", find_duplicates_nested_loop(sample3))
-    print("Sample 4:", find_duplicates_nested_loop(sample4))
+    print("Sample 1:", find_duplicates(sample1))
+    print("Sample 2:", find_duplicates(sample2))
+    print("Sample 3:", find_duplicates(sample3))
+    print("Sample 4:", find_duplicates(sample4))
