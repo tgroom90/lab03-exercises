@@ -5,17 +5,24 @@ import java.util.List;
 public class FindDuplicates {
 
     public static List<Integer> findModeNestedLoops(List<Integer> l) {
-        List<Integer> unique = new ArrayList<Integer>();
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> dups = new ArrayList<Integer>();
+
         for (int i = 0; i < l.size(); i++) {
-            if (unique.contains(l.get(i))) {
-                if (result.contains(l.get(i)) == false) {
-                    result.add(l.get(i));
+            int num = l.get(i);
+            boolean duplicate = false;
+
+            for (int j = i + 1; j < l.size(); j++) {
+                if (num == l.get(j)) {
+                    duplicate = true;
+                    break;
                 }
             }
-            unique.add(l.get(i));
+
+            if ((duplicate == true) && (dups.contains(num) == false)) {
+                dups.add(num);
+            }
         }
-        return result;
+        return dups;
     }
 
     public static void main(String[] args) {

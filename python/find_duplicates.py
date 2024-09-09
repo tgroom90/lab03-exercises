@@ -1,13 +1,14 @@
 def find_duplicates_nested_loop(l: list) -> list:
-    unique = set()
-    results = set()
-
-    for num in l:
-        if num in unique:
-            results.add(num)
-        else:
-            unique.add(num)
-
+    results = list()
+    for i in range(len(l)):
+        num = l[i]
+        duplicate = False
+        for j in range(i + 1, len(l)):
+            if num == l[j]:
+                duplicate = True
+                break
+        if duplicate and num not in results:
+            results.append(num)
     return results
 
 if __name__ == "__main__":
