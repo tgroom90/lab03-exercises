@@ -6,7 +6,6 @@ public class FindDuplicates {
 
     public static List<Integer> findModeNestedLoops(List<Integer> l) {
         List<Integer> dups = new ArrayList<Integer>();
-
         for (int i = 0; i < l.size(); i++) {
             int num = l.get(i);
             boolean duplicate = false;
