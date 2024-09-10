@@ -9,7 +9,6 @@ public class FindDuplicates {
         for (int i = 0; i < l.size(); i++) {
             int num = l.get(i);
             boolean duplicate = false;
-
             for (int j = i + 1; j < l.size(); j++) {
                 if (num == l.get(j)) {
                     duplicate = true;
@@ -30,7 +29,6 @@ public class FindDuplicates {
         for (int i = 0; i < l.size(); i++) {
             int num = l.get(i);
             boolean duplicate = false;
-
             for (int j = i + 1; j < l.size(); j++) {
                 if (num == l.get(j)) {
                     duplicate = true;
