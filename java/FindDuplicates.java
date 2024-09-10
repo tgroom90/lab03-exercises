@@ -44,10 +44,18 @@ public class FindDuplicates {
         List<Integer> sample2 = new ArrayList<Integer>(Arrays.asList(3, 5, 6, 4, 4, 5, 66, 6, 7, 6));
         List<Integer> sample3 = new ArrayList<Integer>(Arrays.asList(3, 0, 5, 1, 0));
         List<Integer> sample4 = new ArrayList<Integer>(Arrays.asList(3));
+        System.out.println("Sample 1: " + findModeNestedLoops(sample1));
+        System.out.println("Sample 2: " + findModeNestedLoops(sample2));
+        System.out.println("Sample 3: " + findModeNestedLoops(sample3));
+        System.out.println("Sample 4: " + findModeNestedLoops(sample4));
+
+        System.out.println("Now testing the more efficient function..");
+
         System.out.println("Sample 1: " + findDuplicates(sample1));
         System.out.println("Sample 2: " + findDuplicates(sample2));
         System.out.println("Sample 3: " + findDuplicates(sample3));
         System.out.println("Sample 4: " + findDuplicates(sample4));
+
     }
 
 }

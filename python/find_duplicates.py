@@ -29,6 +29,13 @@ if __name__ == "__main__":
     sample3 = [3, 0, 5, 1, 0]
     sample4 = [3]
     
+    print("Sample 1:", find_duplicates_nested_loop(sample1))
+    print("Sample 2:", find_duplicates_nested_loop(sample2))
+    print("Sample 3:", find_duplicates_nested_loop(sample3))
+    print("Sample 4:", find_duplicates_nested_loop(sample4))
+
+    print("Beginning test for new and improved function..")
+
     print("Sample 1:", find_duplicates(sample1))
     print("Sample 2:", find_duplicates(sample2))
     print("Sample 3:", find_duplicates(sample3))
