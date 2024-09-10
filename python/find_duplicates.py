@@ -14,13 +14,11 @@ def find_duplicates_nested_loop(l: list) -> list:
 def find_duplicates(l: list) -> list:
     unique = set()
     results = set()
-
     for num in l:
         if num in unique:
             results.add(num)
         else:
             unique.add(num)
-
     return results
 
 if __name__ == "__main__":
