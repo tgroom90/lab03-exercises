@@ -9,7 +9,26 @@ public class FindDuplicates {
         for (int i = 0; i < l.size(); i++) {
             int num = l.get(i);
             boolean duplicate = false;
+            for (int j = i + 1; j < l.size(); j++) {
+                if (num == l.get(j)) {
+                    duplicate = true;
+                    break;
+                }
+            }
 
+            if ((duplicate == true) && (dups.contains(num) == false)) {
+                dups.add(num);
+            }
+        }
+        return dups;
+    }
+
+    public static List<Integer> findDuplicates(List<Integer> l) {
+        List<Integer> unique = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<Integer>();
+        for (int i = 0; i < l.size(); i++) {
+            int num = l.get(i);
+            boolean duplicate = false;
             for (int j = i + 1; j < l.size(); j++) {
                 if (num == l.get(j)) {
                     duplicate = true;
@@ -33,6 +52,14 @@ public class FindDuplicates {
         System.out.println("Sample 2: " + findModeNestedLoops(sample2));
         System.out.println("Sample 3: " + findModeNestedLoops(sample3));
         System.out.println("Sample 4: " + findModeNestedLoops(sample4));
+
+        System.out.println("Now testing the more efficient function..");
+
+        System.out.println("Sample 1: " + findDuplicates(sample1));
+        System.out.println("Sample 2: " + findDuplicates(sample2));
+        System.out.println("Sample 3: " + findDuplicates(sample3));
+        System.out.println("Sample 4: " + findDuplicates(sample4));
+
     }
 
 }
